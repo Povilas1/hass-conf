@@ -1,16 +1,3 @@
-- platform: transmission
-  name: Slowdown Transmission
-  host: !secret transmission_host
-  username: !secret transmission_username
-  password: !secret transmission_password
-
-#- platform: hdmi
-
-- platform: command_line
-  switches:
-    home_assistant_system_shutdown:
-      command_off: "/usr/bin/sudo /sbin/reboot"
-
 - platform: mqtt
   name: "Strip Cord"
   command_topic: "cmnd/sonoff/power"
@@ -23,12 +10,12 @@
 - platform: command_line
   switches:
     hyperion_service:
-      command_on: "ssh -i /config/ssh/id_rsa  homeassistant@192.168.0.103 'sudo systemctl start hyperion.service'"
-      command_off: "ssh -i /config/ssh/id_rsa homeassistant@192.168.0.103 'sudo systemctl stop hyperion.service'"
+      command_on: "ssh -i /config/ssh/id_rsa  pi@192.168.1.123 'sudo systemctl start hyperion.service'"
+      command_off: "ssh -i /config/ssh/id_rsa pi@192.168.1.123 'sudo systemctl stop hyperion.service'"
       friendly_name: Hyperion Service
 
 - platform: command_line
   switches:
     test_ssh:
-      command_on: "ssh -i /config/ssh/id_rsa homeassistant@192.168.0.103 'echo hass-did-it >> /home/homeassistant/test-ssh.txt'"
+      command_on: "ssh -i /config/ssh/id_rsa pi@192.168.1.123 'echo hass-did-it >> /home/homeassistant/test-ssh.txt'"
       friendly_name: Magic Test Switch

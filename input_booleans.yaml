@@ -1,11 +1,11 @@
-alarmweekday:
-  name: Active weekdays
-  initial: on
-  icon: mdi:calendar
-
-alarmweekon:
-  name: Active weekends
-  initial: on
+#alarmweekday:
+#  name: Active weekdays
+#  initial: on
+#  icon: mdi:calendar
+#
+#alarmweekon:
+#  name: Active weekends
+#  initial: on
 
 # activate_hyperion_effect:
 #   name: Run Effect
