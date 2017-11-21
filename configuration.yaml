@@ -27,13 +27,13 @@ frontend:
 automation: !include automations.yaml
 config:
 
-mqtt:
-  broker: core-mosquitto
-  port: 1883
-  client_id: hassio
-  username: !secret mqtt_username
-  password: !secret mqtt_password 
-
+#mqtt:
+#  broker: core-mosquitto
+#  port: 1883
+#  client_id: hassio
+#  username: !secret mqtt_username
+#  password: !secret mqtt_password
+#
 http:
   # Uncomment this to add a password (recommended!)
   api_password: !secret hass_api_password
@@ -60,7 +60,7 @@ discovery:
 #     - 192.168.0.4
 #     - 192.168.0.103
 
-ios:
+#ios:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -71,21 +71,21 @@ history:
 logbook:
 
 # Track the sun
-sun:
+#sun:
 
 
 # tts:
 #   platform: google
 
-sensor: !include sensors.yaml
-scene: !include scenes.yaml
-input_boolean: !include input_booleans.yaml
-script: !include scripts.yaml
-switch: !include switches.yaml
-group: !include groups.yaml
+#sensor: !include sensors.yaml
+#scene: !include scenes.yaml
+#input_boolean: !include input_booleans.yaml
+#script: !include scripts.yaml
+#switch: !include switches.yaml
+#group: !include groups.yaml
 light: !include lights.yaml
 
-media_player: !include media_players.yaml
+#media_player: !include media_players.yaml
 
 
 #logger:
