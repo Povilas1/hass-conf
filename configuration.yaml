@@ -81,7 +81,7 @@ logbook:
 #scene: !include scenes.yaml
 #input_boolean: !include input_booleans.yaml
 #script: !include scripts.yaml
-#switch: !include switches.yaml
+switch: !include switches.yaml
 #group: !include groups.yaml
 light: !include lights.yaml
 
