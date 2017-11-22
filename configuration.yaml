@@ -85,7 +85,7 @@ switch: !include switches.yaml
 #group: !include groups.yaml
 light: !include lights.yaml
 
-#media_player: !include media_players.yaml
+media_player: !include media_players.yaml
 
 
 #logger:
